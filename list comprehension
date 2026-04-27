@@ -1,0 +1,22 @@
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    # Initialize an empty list to store our coordinates
+result = []
+
+# Loop through every value from 0 to x
+for i in range(x + 1):
+    # For every i, loop through every value from 0 to y
+    for j in range(y + 1):
+        # For every j, loop through every value from 0 to z
+        for k in range(z + 1):
+            # Check the condition: is the sum NOT equal to n?
+            if (i + j + k) != n:
+                # If the condition is met, add the [i, j, k] list to our result
+                result.append([i, j, k])
+
+# Finally, print the collected list
+print(result)
+
