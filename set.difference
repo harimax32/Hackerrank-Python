@@ -1,0 +1,14 @@
+# Read input for English newspaper subscribers (Set A)
+n = int(input())
+english_subscribers = set(map(int, input().split()))
+
+# Read input for French newspaper subscribers (Set B)
+m = int(input())
+french_subscribers = set(map(int, input().split()))
+
+# Calculate the difference (A - B)
+# Only English = English - French
+only_english = english_subscribers.difference(french_subscribers)
+
+# Print the total count
+print(len(only_english))
