@@ -1,0 +1,14 @@
+# Read input for English newspaper subscribers
+n = int(input())
+english_subscribers = set(map(int, input().split()))
+
+# Read input for French newspaper subscribers
+m = int(input())
+french_subscribers = set(map(int, input().split()))
+
+# Calculate the union of both sets
+# Both .union() and the | operator work here
+total_subscribers = english_subscribers.union(french_subscribers)
+
+# Print the total count
+print(len(total_subscribers))
