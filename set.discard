@@ -1,0 +1,17 @@
+n = int(input())
+s = set(map(int, input().split()))
+n_commands = int(input())
+
+for _ in range(n_commands):
+    # Split the command (e.g., "remove 9") into a list
+    command = input().split()
+    method = command[0]
+    
+    if method == "pop":
+        s.pop()
+    else:
+        # Use getattr to call s.remove(val) or s.discard(val)
+        value = int(command[1])
+        getattr(s, method)(value)
+
+print(sum(s))
