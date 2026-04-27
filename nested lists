@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    students = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        students.append([name, score])
+
+    # Extract all unique scores and sort them
+    grades = sorted(list(set([x[1] for x in students])))
+    
+    # Identify the second lowest grade
+    second_lowest_grade = grades[1]
+    
+    # Filter names that match the grade and sort them
+    winners = sorted([x[0] for x in students if x[1] == second_lowest_grade])
+    
+    # Print each name on a new line
+    for name in winners:
+        print(name)
